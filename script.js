@@ -7,14 +7,14 @@ window.onload = function() {
   progress.className = 'progress';
   progressBar.appendChild(progress);
   
-  const workTime = 5*1; // 25 minutes
-  const breakTime = 5*1; // 5 minutes
-  let timerId; // Updated variable name
-  let time; // Updated variable name
+  const workTime = 25*60; // 25 minutes
+  const breakTime = 5*60; // 5 minutes
+  let timerId; 
+  let time; 
   let isWorkTime = true;
   
   function startTimer(duration, display) {
-    time = duration; // Updated variable name
+    time = duration; 
     clearInterval(timerId);
     timerId = setInterval(function () {
       const minutes = Math.floor(time / 60);
@@ -24,7 +24,7 @@ window.onload = function() {
   
       display.textContent = minutes + ":" + seconds;
   
-      const progressPercentage = ((duration - time) / duration) * 100; // Updated progress calculation
+      const progressPercentage = ((duration - time) / duration) * 100; 
       progress.style.width = progressPercentage + "%";
   
       if (--time < 0) {
@@ -33,15 +33,15 @@ window.onload = function() {
           display.textContent = "Break Time!";
           document.body.classList.remove('work-time');
           document.body.classList.add('break-time');
-          time = breakTime; // Updated variable name
+          time = breakTime; 
         } else {
           display.textContent = "Work Time!";
           document.body.classList.remove('break-time');
           document.body.classList.add('work-time');
-          time = workTime; // Updated variable name
+          time = workTime; 
         }
         isWorkTime = !isWorkTime;
-        startTimer(time, display); // Added recursive call to start the next timer
+        startTimer(time, display); 
       }
     }, 1000);
   }
