@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;500&family=Poppins:wght@300&display=swap');
+
+body {
+  font-family: "Poppins";
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+h1 {
+  display: flex;
+  background-color: #260a3a; /* Dark Purple */
+  color: #fff;
+  height: 60px;
+  justify-content: baseline;
+  padding: 0 20px;
+  align-items: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+}
+
+.container {
+  text-align: center;
+}
+
+body.work-time {
+  background: hsla(4, 78%, 31%, 1);
+
+  background: linear-gradient(90deg, hsla(4, 78%, 31%, 1) 0%, hsla(37, 100%, 41%, 1) 100%);
+  
+  background: -moz-linear-gradient(90deg, hsla(4, 78%, 31%, 1) 0%, hsla(37, 100%, 41%, 1) 100%);
+  
+  background: -webkit-linear-gradient(90deg, hsla(4, 78%, 31%, 1) 0%, hsla(37, 100%, 41%, 1) 100%);
+  
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#8E1A12", endColorstr="#D08000", GradientType=1 );
+}
+
+body.break-time {
+  background: hsla(213, 77%, 14%, 1);
+
+  background: linear-gradient(90deg, hsla(213, 77%, 14%, 1) 0%, hsla(202, 27%, 45%, 1) 100%);
+  
+  background: -moz-linear-gradient(90deg, hsla(213, 77%, 14%, 1) 0%, hsla(202, 27%, 45%, 1) 100%);
+  
+  background: -webkit-linear-gradient(90deg, hsla(213, 77%, 14%, 1) 0%, hsla(202, 27%, 45%, 1) 100%);
+  
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#08203E", endColorstr="#557C93", GradientType=1 );
+}
+
+h1 {
+  color: #eeeeee;
+}
+
+#timer {
+  color: #eeeeee;
+  font-size: 48px;
+  margin: 20px 0;
+}
+
+#progress-bar {
+  width: 400px;
+  height: 20px;
+  background-color: #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 3px solid rgb(236, 236, 236);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+#progress-bar .progress {
+  height: 100%;
+  background-color: green;
+  transition: width 1s linear;
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background: none;
+  display: flex;
+  background-color: #260a3a; /* Dark Purple */
+  color: #fff;
+  height: 60px;
+  justify-content: baseline;
+  padding: 0 20px;
+  align-items: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+}
+
+button:hover{
+  border: 3px solid rgb(236, 236, 236);
+  background-color: #267a26;
+  transition-duration: .5s;
+}
+
+#progress-bar .progress {
+  background-color: green;
+  transition: width 1s linear;
+  animation: progress-animation 1s linear;
+}
+
+@keyframes progress-animation {
+  from {
+    width: 0%;
+  }
+}
